@@ -7,17 +7,17 @@ pipeline {
                 checkout scm
             }
         }
-        
+
         stage ('Unit Tests') {
             steps {
                 sh 'make test'
             }
         }
 
-        stage ('Run') {
-            steps {
-                sh 'make run'
-            }
-        }
+        // stage ('Run') {
+        //     steps {
+        //         sh 'make run'
+        //     }
+        // }
     }
 }
