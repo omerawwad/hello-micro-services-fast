@@ -1,13 +1,13 @@
 pipeline {
     agent any
 
-    stage('Checkout') {
+    stages {
+        stage('Checkout') {
             steps {
                 checkout scm
             }
         }
-
-    stages {
+        
         stage ('Unit Tests') {
             steps {
                 sh 'make test'
