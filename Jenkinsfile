@@ -14,10 +14,10 @@ pipeline {
             }
         }
 
-        // stage ('Run') {
-        //     steps {
-        //         sh 'make run'
-        //     }
-        // }
+        stage ('Build') {
+            steps {
+                echo 'Building the application...'
+            }
+        }
     }
 }
