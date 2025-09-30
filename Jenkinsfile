@@ -12,12 +12,11 @@ pipeline {
             steps {
                 sh 'make test'
             }
+            post {
+                always {
+                    cleanWs()
+                }
+            }
         }
-
-        // stage ('Run') {
-        //     steps {
-        //         sh 'make run'
-        //     }
-        // }
     }
 }
